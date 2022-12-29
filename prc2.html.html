@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 2</title>
+</head>
+<body onload="document.getElementById('idItem').focus();">
+    <input type="text" value="" id="idItem" onblur="addItems();">
+
+    <button type="submit">Submit</button>
+    <label for="sorting">Choose a type:</label>
+
+    <select name="sort" id="sort">
+  <option value="Sorted">Sorted</option>
+  <option value="Unsorted">Unsorted</option>
+    </select>
+
+    <h2>Entered Items :</h2>
+    <ul id="idEntItems"></ul>
+
+    <script src="./js/prc.js"></script>
+</body>
+</html>
