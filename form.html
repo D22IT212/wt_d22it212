@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+ 
+</head>
+<body> 
+    <h1>Signup</h1>
+    <br name="signup" action="form.html" method="post">
+
+         username
+          <input type="text" name="username"  id="username" placeholder="Enter name"/>
+          <span id="name"></span>
+         </br>
+          password
+          <input type="password" id="pwd" placeholder="Enter password"/>
+          <span id="pass"></span>
+         </br>
+         
+  
+          <button type="button" value="signup" onclick="dovalidate();">button</button>
+         </br>
+        
+    
+      </form>
+      <script>
+        function dovalidate() {
+            let isForvalid = true;
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("pwd").value;
+            if(username.length <= 0)
+            {
+                document.getElementById("name").textContent = "Please enter username";
+
+                isForvalid = false;
+            }
+            if (password.length <=7){
+                document.getElementById("pass").textContent = "Enter valid password - min 8 characters"
+                isForvalid = false;
+            }
+            if (isForvalid){
+                document.signup.submit();
+            }
+        }
+      </script>
+    
+</body>
+</html>
+
