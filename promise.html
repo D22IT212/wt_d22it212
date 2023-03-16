@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="post">
+        <input type="text" id="textId"/>
+        <input type="button" value="Submit" onclick="myPromise()">
+    </form>
+
+    <h1><span id="h1SpanId"></span></h1>
+
+    <script>
+        function myPromise(){
+            let Mypromise = new Promise(function(resolve, reject){
+                let data = document.getElementById("textId").value;
+
+                if(data>100){
+                    resolve("You did it");
+                }
+                else{
+                    reject("You are bot");
+                }
+            });
+
+            Mypromise
+                .then(function(msg){
+                    document.getElementById("h1SpanId").innerHTML = msg;
+                })
+                .catch(function(msg){
+                    document.getElementById("h1SpanId").innerHTML = msg;
+                });
+        }
+    </script>
+</body>
+</html>
